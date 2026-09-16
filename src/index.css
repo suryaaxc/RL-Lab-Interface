@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 overflow-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .font-pixel {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-[0_8px_30px_rgb(0,0,0,0.06)] rounded-2xl;
+  }
+  .blueprint-grid {
+    background-color: #f8fafc;
+    background-image: 
+      linear-gradient(rgba(37, 99, 235, var(--grid-opacity, 0.08)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37, 99, 235, var(--grid-opacity, 0.08)) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: center center;
+  }
+}
+
+@keyframes pulse-amber {
+  0% { box-shadow: 0 0 0px #f59e0b, inset 0 0 0px #f59e0b; border-color: #e2e8f0; }
+  50% { box-shadow: 0 0 20px #f59e0b, inset 0 0 10px #f59e0b; background-color: rgba(245, 158, 11, 0.15); border-color: #fbbf24; }
+  100% { box-shadow: 0 0 0px #f59e0b, inset 0 0 0px #f59e0b; border-color: #e2e8f0; }
+}
+
+.high-reward-pulse {
+  animation: pulse-amber 0.5s ease-out;
+}

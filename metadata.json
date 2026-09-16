@@ -1,0 +1,6 @@
+{
+  "name": "RL Lab Interface",
+  "description": "Retro-futuristic research lab interface for an Atari RL agent.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
